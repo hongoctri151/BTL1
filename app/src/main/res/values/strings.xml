@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BTL1</string>
+    <string name="smart_food_court_system">Smart Food Court System</string>
+    <string name="m_t_kh_u">Mật khẩu</string>
+    <string name="ng_k">Đăng ký</string>
+    <string name="ng_nh_p">Đăng nhập</string>
+    <string name="ch_a_c_t_i_kho_n">Chưa có tài khoản?</string>
+    <string name="todo">TODO</string>
+    <string name="t_n_ng_nh_p">Tên đăng nhập</string>
+
+</resources>
