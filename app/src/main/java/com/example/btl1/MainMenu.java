@@ -28,6 +28,7 @@ public class MainMenu extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==1)
                 {Intent FoodDetail=new Intent(MainMenu.this,hienthimonan.class);
+
                 startActivity(FoodDetail);}
             }
         });
@@ -36,11 +37,11 @@ public class MainMenu extends AppCompatActivity {
     private void AnhXa(){
         lvMonAn=(ListView) findViewById(R.id.listviewMonAn);
         arrayMonAn=new ArrayList<>();
-        arrayMonAn.add(new MonAn("Bánh Cuốn","15000 đồng",R.drawable.banhcuon));
-        arrayMonAn.add(new MonAn("Bánh Bao","15000 đồng",R.drawable.banhbao));
-        arrayMonAn.add(new MonAn("Cơm sườn","25000 đồng",R.drawable.comsuon));
-        arrayMonAn.add(new MonAn("Xôi","10000 đồng",R.drawable.xoi));
-        arrayMonAn.add(new MonAn("Bún","250000 đồng",R.drawable.bun));
+        arrayMonAn.add(new MonAn("Bánh Cuốn","15000",R.drawable.banhcuon));
+        arrayMonAn.add(new MonAn("Bánh Bao","15000",R.drawable.banhbao));
+        arrayMonAn.add(new MonAn("Cơm sườn","25000",R.drawable.comsuon));
+        arrayMonAn.add(new MonAn("Xôi","10000",R.drawable.xoi));
+        arrayMonAn.add(new MonAn("Bún","25000",R.drawable.bun));
     }
     public void OrderMenu(View view) {
         Intent intent=new Intent(this,OrderMenu.class);// trang dang ky

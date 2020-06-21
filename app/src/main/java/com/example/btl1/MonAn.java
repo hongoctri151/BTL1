@@ -4,10 +4,12 @@ public class MonAn {
     private String Ten;//ten mon an
     private String Mota;//
     private int Hinh;
-    public MonAn(String ten, String moTa,int hinh){
+
+    public MonAn(String ten, String moTa, int hinh){
         Ten=ten;
         Mota=moTa;
         Hinh=hinh;
+
     }
 
     public String getTen() {

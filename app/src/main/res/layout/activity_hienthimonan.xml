@@ -133,11 +133,11 @@
         app:layout_constraintVertical_bias="0.488" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txt_giatien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="15.000đ"
+        android:text="15.000"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +161,7 @@
         app:layout_constraintVertical_bias="0.668" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnDatmon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đặt món"
@@ -172,11 +172,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
         app:layout_constraintVertical_bias="0.918"
-        android:onClick="datmon"
-        tools:ignore="OnClick" />
+        />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/txt_soluong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"

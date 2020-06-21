@@ -5,13 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
 //class hien thuc trang order
 public class Payment extends AppCompatActivity {
-
+    private TextView tvPrice;
+    private TextView tvSoluong;
+    private TextView tvGia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+        Bundle bd= getIntent().getExtras();
+        tvGia=(TextView) findViewById(R.id.giatien);
+        tvSoluong=(TextView) findViewById(R.id.soluong);
+
+        if (bd!=null)
+        {   String soLuong=bd.getString("NUMBER");
+
+
+        tvSoluong.setText(soLuong);}
+
     }
 
     public void AccountMenu(View view) {
