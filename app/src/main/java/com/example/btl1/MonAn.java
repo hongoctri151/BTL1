@@ -1,8 +1,8 @@
 package com.example.btl1;
 //class luu tru thong tin mon an
 public class MonAn {
-    private String Ten;
-    private String Mota;
+    private String Ten;//ten mon an
+    private String Mota;//
     private int Hinh;
     public MonAn(String ten, String moTa,int hinh){
         Ten=ten;
