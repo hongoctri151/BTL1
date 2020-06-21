@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+//Class dieu khien hien thi thong tin o trang Thong bao
 public class AnnouncementMenu extends AppCompatActivity {
 
     @Override

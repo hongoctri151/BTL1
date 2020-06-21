@@ -1,5 +1,5 @@
 package com.example.btl1;
-
+//class luu tru thong tin mon an
 public class MonAn {
     private String Ten;
     private String Mota;

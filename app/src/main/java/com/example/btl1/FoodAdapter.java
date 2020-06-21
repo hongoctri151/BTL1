@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-
+//Adapter cua custom listview Food
 public class FoodAdapter extends BaseAdapter {
     private Context context;
     private int layout;

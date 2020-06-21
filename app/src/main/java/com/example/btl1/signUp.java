@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+// trang dang ky
 public class signUp extends AppCompatActivity {
 
     @Override
@@ -15,6 +15,7 @@ public class signUp extends AppCompatActivity {
     }
 
     public void LoginMenu(View view) {
+        //chuyen huong ve trang MainMenu
         Intent loginMenu=new Intent(this,MainActivity.class);//tro ve trang chinh
         startActivity(loginMenu);
     }
@@ -25,6 +26,7 @@ public class signUp extends AppCompatActivity {
     }
 
     public void dangky(View view) {
+        //Dang ky thanh thanh vien
         Intent dangky=new Intent(this,MainActivity.class);//tro ve trang chinh
         startActivity(dangky);
     }

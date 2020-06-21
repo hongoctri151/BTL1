@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 
 import java.util.ArrayList;
-
+//main menu sau khi dang nhap
 public class MainMenu extends AppCompatActivity {
     ListView lvMonAn;
     ArrayList<MonAn> arrayMonAn;
