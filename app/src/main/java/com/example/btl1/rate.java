@@ -28,4 +28,9 @@ public class rate extends AppCompatActivity {
         Intent intent=new Intent(this,AnnouncementMenu.class);
         startActivity(intent);
     }
+
+    public void MainMenu(View view) {
+        Intent home=new Intent(this,MainMenu.class);
+        startActivity(home);
+    }
 }

@@ -17,7 +17,12 @@ public class FoodAdapter extends BaseAdapter {
     String FoodName[]={"Bánh cuốn","Bánh bao","Cơm sườn","Xôi","Bún"};
     int Price[]={15000,15000,25000,10000,25000};
     int Image[]={R.drawable.banhcuon,R.drawable.banhbao,R.drawable.comsuon,R.drawable.xoi,R.drawable.bun};
-
+    String detail[]={"Bánh cuốn được làm từ bột gạo hấp tráng mỏng, cuộn tròn, bên trong độn nhân rau hoặc thịt",
+            "Bánh bao trứng muối, có vỏ bánh thơm mùi sữa, nhân trứng muối chảy bùi bùi. Xứng đáng là món ngon cho khách hàng lựa chọn!",
+            "Đĩa cơm sườn với sườn nướng, bì, chả, trứng, giúp bạn no bụng với đầy đủ chất dinh dưỡng!",
+            "Xôi được làm từ gạo nếp dẻo, là món ăn không thể thiếu để giúp bạn nạp đầy dinh dưỡng",
+            "Bún với sợi trắng mềm, ăn kèm rau thơm và thịt bò"
+    };
 
     /*public FoodAdapter(Context context, int layout, List<MonAn> monAnList) {
         this.context = context;

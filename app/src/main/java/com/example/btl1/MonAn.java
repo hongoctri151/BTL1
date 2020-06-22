@@ -4,12 +4,13 @@ public class MonAn {
     private String Ten;//ten mon an
     private int Mota;//
     private int Hinh;
+    private String fooddetail;
 
-    public MonAn(String ten, int moTa, int hinh){
-        Ten=ten;
-        Mota=moTa;
-        Hinh=hinh;
-
+    public MonAn(String ten, int mota, int hinh, String fooddetail) {
+        Ten = ten;
+        Mota = mota;
+        Hinh = hinh;
+        this.fooddetail = fooddetail;
     }
 
     public String getTen() {
@@ -34,5 +35,13 @@ public class MonAn {
 
     public void setHinh(int hinh) {
         Hinh = hinh;
+    }
+
+    public String getFooddetail() {
+        return fooddetail;
+    }
+
+    public void setFooddetail(String fooddetail) {
+        this.fooddetail = fooddetail;
     }
 }
