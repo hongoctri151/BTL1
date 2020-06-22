@@ -17,10 +17,12 @@ public class cook extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_cook);
+                lvMonAn=(ListView)findViewById(R.id.listviewMonAn);
                 final FoodAdapter adapter=new FoodAdapter(this);
                 //adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
 
                 lvMonAn.setAdapter(adapter);
+
 
         }
 

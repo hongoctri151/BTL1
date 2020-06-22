@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/hinhnendau"
 
+    android:onClick="Cook"
     tools:context=".MainActivity">
 
     <EditText
@@ -75,9 +76,9 @@
         android:id="@+id/textView"
         android:layout_width="236dp"
         android:layout_height="102dp"
+        android:gravity="center"
         android:text="@string/smart_food_court_system"
         android:textSize="35sp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -128,5 +129,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.945" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Cook"
+        android:text="Cook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.414" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,5 +24,8 @@ public class MainActivity extends AppCompatActivity {
         Intent mainMenu=new Intent(this,MainMenu.class);//trang account_menu
         startActivity(mainMenu);
     }
-
+    public void Cook(View view) {
+        Intent mainMenu=new Intent(this,cook.class);//trang account_menu
+        startActivity(mainMenu);
+    }
 }
