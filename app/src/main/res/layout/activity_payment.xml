@@ -138,11 +138,11 @@
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:onClick="thanhtoantienmat"
             android:paddingTop="5dp"
             android:src="@drawable/tienmat"
-            android:tint="#11DCFA"
+            android:tint="#1CAF12"
             tools:ignore="OnClick" />
 
         <TextView
@@ -159,9 +159,7 @@
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_marginTop="40dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="5dp"
+            android:layout_marginTop="30dp"
 
             android:src="@drawable/momo" />
 
@@ -172,7 +170,7 @@
             android:layout_gravity="left"
             android:gravity="center"
             android:paddingLeft="20dp"
-            android:text="Ví điện từ"
+            android:text="Ví điện tử"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -193,7 +191,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:paddingTop="5dp"
-            android:src="@drawable/username"
+            android:src="@drawable/usericon"
             android:tint="#11DCFA" />
 
         <EditText
@@ -360,7 +358,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:src="@drawable/note"
 
             />

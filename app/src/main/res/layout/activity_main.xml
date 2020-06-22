@@ -10,8 +10,8 @@
 
     <EditText
         android:id="@+id/editTextTextPassword3"
-        android:layout_width="219dp"
-        android:layout_height="39dp"
+        android:layout_width="260dp"
+        android:layout_height="41dp"
         android:autofillHints=""
         android:background="@drawable/textedit"
         android:ems="10"
@@ -33,11 +33,11 @@
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213"
-        app:srcCompat="@drawable/username" />
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/usericon" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -48,15 +48,15 @@
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
+        app:layout_constraintVertical_bias="0.312"
         app:srcCompat="@drawable/password" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="219dp"
+        android:layout_width="260dp"
         android:layout_height="41dp"
         android:autofillHints=""
         android:background="@drawable/textedit"
@@ -88,7 +88,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="124dp"
-        android:layout_height="36dp"
+        android:layout_height="41dp"
         android:background="@drawable/btn"
         android:onClick="Login"
         android:text="@string/ng_nh_p"
@@ -102,18 +102,18 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="121dp"
-        android:layout_height="40dp"
+        android:layout_width="124dp"
+        android:layout_height="41dp"
         android:background="@drawable/btn"
         android:onClick="SignUp"
 
         android:text="@string/ng_k"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.946" />
 
     <TextView
         android:id="@+id/textView2"
@@ -124,9 +124,9 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.945" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
