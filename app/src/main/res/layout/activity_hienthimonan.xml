@@ -16,57 +16,68 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar5"
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginTop="584dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="98dp"
+        android:id="@+id/imageView15"
+        android:layout_width="76dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:layout_marginBottom="16dp"
+        android:onClick="MainMenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.272"
-        app:srcCompat="@drawable/ordericon"
-        android:onClick="thanhtoan"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/homeicon"
         tools:ignore="OnClick" />
 
     <ImageView
-        android:id="@+id/imageView28"
+        android:id="@+id/imageView16"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:tint="#11DCFA"
+        android:onClick="thongtindonhang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/ordericon"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView17"
         android:layout_width="82dp"
         android:layout_height="53dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
         android:onClick="Announcement"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/bellicon" />
 
     <ImageView
-        android:id="@+id/imageView29"
+        android:id="@+id/imageView18"
         android:layout_width="81dp"
         android:layout_height="53dp"
         android:onClick="AccountMenu"
@@ -76,50 +87,36 @@
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/usericon" />
 
     <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="76dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:onClick="MainMenu"
-        android:tint="#11DCFA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
-        app:srcCompat="@drawable/homeicon"
-        tools:ignore="OnClick" />
-
-    <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/imgid"
         android:layout_width="match_parent"
-        android:layout_height="184dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        android:layout_height="160dp"
+        android:layout_marginBottom="436dp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchView"
-        app:layout_constraintVertical_bias="0.105"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/banhbao" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_bright"
-        android:gravity="center"
         android:text="Giá tiền:"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.38" />
 
     <TextView
         android:id="@+id/textView8"
@@ -129,66 +126,69 @@
         android:gravity="center"
         android:text="Mô tả món ăn:"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
-        android:id="@+id/txt_giatien"
+        android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="15.000"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintVertical_bias="0.433" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="147dp"
+        android:layout_width="412dp"
+        android:layout_height="152dp"
         android:gravity="center"
         android:text="Bánh bao trứng muối, có vỏ bánh thơm mùi sữa, nhân trứng muối chảy bùi bùi. Xứng đáng là món ngon cho khách hàng lựa chọn!"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.668" />
 
     <Button
         android:id="@+id/btnDatmon"
-        android:layout_width="91dp"
-        android:layout_height="36dp"
-        android:background="@drawable/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Đặt món"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="payment"
+        android:background="@drawable/btn"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.918"
+        />
 
     <EditText
         android:id="@+id/txt_soluong"
-        android:layout_width="215dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
         android:ems="10"
+
         android:gravity="center"
         android:hint="Số lượng"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

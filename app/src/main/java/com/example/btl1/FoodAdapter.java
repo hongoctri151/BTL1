@@ -13,42 +13,58 @@ import java.util.List;
 public class FoodAdapter extends BaseAdapter {
     private Context context;
     private int layout;
-    private List<MonAn> monAnList;
+    //private List<MonAn> monAnList;
+    String FoodName[]={"Bánh cuốn","Bánh bao","Cơm sườn","Xôi","Bún"};
+    int Price[]={15000,15000,25000,10000,25000};
+    int Image[]={R.drawable.banhcuon,R.drawable.banhbao,R.drawable.comsuon,R.drawable.xoi,R.drawable.bun};
 
-    public FoodAdapter(Context context, int layout, List<MonAn> monAnList) {
+
+    /*public FoodAdapter(Context context, int layout, List<MonAn> monAnList) {
         this.context = context;
         this.layout = layout;
         this.monAnList = monAnList;
+    }*/
+    public FoodAdapter (Context context)
+    {
+        this.context=context;
     }
 
     @Override
     public int getCount() {
-        return monAnList.size();
+        return FoodName.length;
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return FoodName[i];
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view=inflater.inflate(layout,null);
-        // Ánh xạ view
-        TextView txtTen=(TextView) view.findViewById(R.id.textviewTen);
-        TextView txtMota=(TextView) view.findViewById(R.id.textviewMoTa);
-        ImageView imgHinh=(ImageView) view.findViewById(R.id.imageviewHinh);
-        //gán giá trị
-        MonAn monAn=monAnList.get(i);
+        if (view==null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.dong_mon_an, null);}
+            // Ánh xạ view
+
+            TextView txtTen = (TextView) view.findViewById(R.id.textviewTen);
+            TextView txtMota = (TextView) view.findViewById(R.id.textviewMoTa);
+            ImageView imgHinh = (ImageView) view.findViewById(R.id.imageviewHinh);
+            //gán giá trị
+
+        /*MonAn monAn=monAnList.get(i);
         txtTen.setText(monAn.getTen()) ;
         txtMota.setText(monAn.getMota());
-        imgHinh.setImageResource(monAn.getHinh());
+        imgHinh.setImageResource(monAn.getHinh());*/
+
+            txtTen.setText(FoodName[i]);
+            txtMota.setText(String.valueOf(Price[i]));
+            imgHinh.setImageResource(Image[i]);
+
         return view;
     }
 }

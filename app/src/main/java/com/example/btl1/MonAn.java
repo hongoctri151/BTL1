@@ -2,10 +2,10 @@ package com.example.btl1;
 //class luu tru thong tin mon an
 public class MonAn {
     private String Ten;//ten mon an
-    private String Mota;//
+    private int Mota;//
     private int Hinh;
 
-    public MonAn(String ten, String moTa, int hinh){
+    public MonAn(String ten, int moTa, int hinh){
         Ten=ten;
         Mota=moTa;
         Hinh=hinh;
@@ -20,11 +20,11 @@ public class MonAn {
         Ten = ten;
     }
 
-    public String getMota() {
+    public int getMota() {
         return Mota;
     }
 
-    public void setMota(String mota) {
+    public void setMota(int mota) {
         Mota = mota;
     }
 

@@ -11,28 +11,33 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 //main menu sau khi dang nhap
+
 public class MainMenu extends AppCompatActivity {
     ListView lvMonAn;
     ArrayList<MonAn> arrayMonAn;
-    FoodAdapter adapter;
+    //FoodAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        AnhXa();
-        adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
+
+        lvMonAn=(ListView) findViewById(R.id.listviewMonAn);
+        FoodAdapter adapter=new FoodAdapter(this);
+        //adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
+
         lvMonAn.setAdapter(adapter);
-        lvMonAn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       lvMonAn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i==1)
+
                 {Intent FoodDetail=new Intent(MainMenu.this,hienthimonan.class);
+                FoodDetail.putExtra("POSITION",i);
                 startActivity(FoodDetail);}
             }
         });
 
     }
-    private void AnhXa(){
+    /*private void AnhXa(){
         lvMonAn=(ListView) findViewById(R.id.listviewMonAn);
         arrayMonAn=new ArrayList<>();
         arrayMonAn.add(new MonAn("Bánh Cuốn","Giá tiền: 15.000đ",R.drawable.banhcuon));
@@ -40,7 +45,7 @@ public class MainMenu extends AppCompatActivity {
         arrayMonAn.add(new MonAn("Cơm sườn","Giá tiền: 20.000đ",R.drawable.comsuon));
         arrayMonAn.add(new MonAn("Xôi","Giá tiền: 15.000đ",R.drawable.xoi));
         arrayMonAn.add(new MonAn("Bún","Giá tiền: 20.000đ",R.drawable.bun));
-    }
+    }*/
     public void OrderMenu(View view) {
         Intent intent=new Intent(this,OrderMenu.class);// trang dang ky
         startActivity(intent);
