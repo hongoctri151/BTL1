@@ -22,13 +22,11 @@ public class MainMenu extends AppCompatActivity {
         AnhXa();
         adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
         lvMonAn.setAdapter(adapter);
-        // su kien click de hien thi thong tin mon an
         lvMonAn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==1)
                 {Intent FoodDetail=new Intent(MainMenu.this,hienthimonan.class);
-
                 startActivity(FoodDetail);}
             }
         });
@@ -37,11 +35,11 @@ public class MainMenu extends AppCompatActivity {
     private void AnhXa(){
         lvMonAn=(ListView) findViewById(R.id.listviewMonAn);
         arrayMonAn=new ArrayList<>();
-        arrayMonAn.add(new MonAn("Bánh Cuốn","15000",R.drawable.banhcuon));
-        arrayMonAn.add(new MonAn("Bánh Bao","15000",R.drawable.banhbao));
-        arrayMonAn.add(new MonAn("Cơm sườn","25000",R.drawable.comsuon));
-        arrayMonAn.add(new MonAn("Xôi","10000",R.drawable.xoi));
-        arrayMonAn.add(new MonAn("Bún","25000",R.drawable.bun));
+        arrayMonAn.add(new MonAn("Bánh Cuốn","Giá tiền: 15.000đ",R.drawable.banhcuon));
+        arrayMonAn.add(new MonAn("Bánh Bao","Giá tiền: 15.000đ",R.drawable.banhbao));
+        arrayMonAn.add(new MonAn("Cơm sườn","Giá tiền: 20.000đ",R.drawable.comsuon));
+        arrayMonAn.add(new MonAn("Xôi","Giá tiền: 15.000đ",R.drawable.xoi));
+        arrayMonAn.add(new MonAn("Bún","Giá tiền: 20.000đ",R.drawable.bun));
     }
     public void OrderMenu(View view) {
         Intent intent=new Intent(this,OrderMenu.class);// trang dang ky

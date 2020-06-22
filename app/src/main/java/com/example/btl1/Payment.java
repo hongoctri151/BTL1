@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 //class hien thuc trang order
 public class Payment extends AppCompatActivity {
-    private TextView tvPrice;
+    private TextView tvTotalPrice;
     private TextView tvSoluong;
     private TextView tvGia;
     @Override
@@ -23,8 +23,7 @@ public class Payment extends AppCompatActivity {
         if (bd!=null)
         {   String soLuong=bd.getString("NUMBER");
 
-
-        tvSoluong.setText(soLuong);}
+                tvSoluong.setText(soLuong);}
 
     }
 

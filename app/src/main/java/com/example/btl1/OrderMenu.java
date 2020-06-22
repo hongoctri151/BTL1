@@ -30,4 +30,8 @@ public class OrderMenu extends AppCompatActivity {
     }
 
 
+    public void thanhtoan(View view) {
+        Intent thanhtoan=new Intent(this,rate.class);// trang dang ky
+        startActivity(thanhtoan);
+    }
 }
