@@ -28,4 +28,14 @@ public class AnnouncementMenu extends AppCompatActivity {
         Intent intent=new Intent(this,MainMenu.class);// trang dang ky
         startActivity(intent);
     }
+
+    public void Announcement(View view) {
+        Intent intent=new Intent(this,AnnouncementMenu.class);// trang dang ky
+        startActivity(intent);
+    }
+
+    public void thanhtoan(View view) {
+        Intent intent=new Intent(this,OrderMenu.class);// trang dang ky
+        startActivity(intent);
+    }
 }

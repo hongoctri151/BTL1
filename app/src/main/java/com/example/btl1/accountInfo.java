@@ -33,4 +33,9 @@ public class accountInfo extends AppCompatActivity {
         Intent Logout=new Intent(this,MainActivity.class);// trang chu
         startActivity(Logout);
     }
+
+    public void AccountMenu(View view) {
+        Intent intent=new Intent(this,accountInfo.class);// trang chu
+        startActivity(intent);
+    }
 }

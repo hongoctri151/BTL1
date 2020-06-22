@@ -46,4 +46,9 @@ public class Payment extends AppCompatActivity {
         Intent tienmat=new Intent(this,OrderMenu.class);
         startActivity(tienmat);
     }
+
+    public void thanhtoan(View view) {
+        Intent a=new Intent(this,OrderMenu.class);
+        startActivity(a);
+    }
 }

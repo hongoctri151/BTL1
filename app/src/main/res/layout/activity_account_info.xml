@@ -8,8 +8,74 @@
     android:background="?attr/colorPrimaryDark">
 
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="584dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="82dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:onClick="Announcement"
+        android:tint="#11DCFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973"
+        app:srcCompat="@drawable/bellicon" />
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="81dp"
+        android:layout_height="53dp"
+        android:onClick="AccountMenu"
+        android:tint="#11DCFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973"
+        app:srcCompat="@drawable/usericon"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="76dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:onClick="MainMenu"
+        android:tint="#11DCFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973"
+        app:srcCompat="@drawable/homeicon"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="98dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginBottom="16dp"
+        android:tint="#11DCFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ordericon" />
 
     <SearchView
         android:id="@+id/searchView"
@@ -18,77 +84,10 @@
         android:hint="Tìm kiếm thông tin món ăn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="407dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="4dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="76dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:onClick="MainMenu"
-        android:tint="#11DCFA"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/homeicon"
-        tools:ignore="OnClick" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="98dp"
-        android:layout_height="53dp"
-        android:onClick="OrderMenu"
-        android:tint="#11DCFA"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.016"
-        app:srcCompat="@drawable/ordericon" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="82dp"
-        android:layout_height="53dp"
-        android:onClick="Announcement"
-        android:tint="#11DCFA"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/bellicon" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="81dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:tint="#11DCFA"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/usericon" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -96,12 +95,12 @@
         android:layout_height="529dp"
         android:layout_gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.918">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -199,8 +198,7 @@
                 android:paddingLeft="20dp"
                 android:text="Thanh Toán"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
 
 
@@ -270,7 +268,7 @@
                 android:layout_height="36dp"
                 android:src="@drawable/setting"
 
-                 />
+                />
 
             <TextView
                 android:id="@+id/setting"
@@ -319,9 +317,9 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/logout"
                 android:onClick="Mainactivity"
-                tools:ignore="OnClick"/>
+                android:src="@drawable/logout"
+                tools:ignore="OnClick" />
 
 
             <TextView

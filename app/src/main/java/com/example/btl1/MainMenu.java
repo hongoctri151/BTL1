@@ -55,4 +55,9 @@ public class MainMenu extends AppCompatActivity {
         Intent intent=new Intent(this,accountInfo.class);// trang dang ky
         startActivity(intent);
     }
+
+    public void thanhtoan(View view) {
+        Intent intent=new Intent(this,OrderMenu.class);// trang dang ky
+        startActivity(intent);
+    }
 }

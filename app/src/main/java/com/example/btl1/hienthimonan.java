@@ -53,5 +53,8 @@ public class hienthimonan extends AppCompatActivity {
     }
 
 
-
+    public void thanhtoan(View view) {
+        Intent abc=new Intent(this,OrderMenu.class);
+        startActivity(abc);
+    }
 }

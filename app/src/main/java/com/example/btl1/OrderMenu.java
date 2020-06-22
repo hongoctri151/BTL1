@@ -34,4 +34,9 @@ public class OrderMenu extends AppCompatActivity {
         Intent thanhtoan=new Intent(this,rate.class);// trang dang ky
         startActivity(thanhtoan);
     }
+
+    public void OrderMenu(View view) {
+        Intent intent=new Intent(this, OrderMenu.class);// trang dang ky
+        startActivity(intent);
+    }
 }

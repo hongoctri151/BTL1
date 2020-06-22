@@ -18,4 +18,14 @@ public class rate extends AppCompatActivity {
         Intent account=new Intent(this,accountInfo.class);
         startActivity(account);
     }
+
+    public void thanhtoan(View view) {
+        Intent intent=new Intent(this,OrderMenu.class);
+        startActivity(intent);
+    }
+
+    public void Announcement(View view) {
+        Intent intent=new Intent(this,AnnouncementMenu.class);
+        startActivity(intent);
+    }
 }
