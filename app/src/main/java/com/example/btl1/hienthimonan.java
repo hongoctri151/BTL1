@@ -55,6 +55,7 @@ public class hienthimonan extends AppCompatActivity {
         Intent intent=new Intent(hienthimonan.this,Payment.class);
         intent.putExtra("PRICE",String.valueOf(adapter.Price[pos]));
         intent.putExtra("NUMBER",number.getText().toString());
+        intent.putExtra("POSITION",pos);
         startActivity(intent);
     }
     public void thanhtoan(View view) {
