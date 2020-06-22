@@ -16,15 +16,24 @@ public class Payment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-        Bundle bd= getIntent().getExtras();
+        Intent receiveData=getIntent();
+
+        tvTotalPrice=(TextView) findViewById(R.id.tong);
         tvGia=(TextView) findViewById(R.id.giatien);
         tvSoluong=(TextView) findViewById(R.id.soluong);
 
-        if (bd!=null)
-        {   String soLuong=bd.getString("NUMBER");
+       String number=receiveData.getStringExtra("NUMBER");
+       String price=receiveData.getStringExtra("PRICE");
 
-                tvSoluong.setText(soLuong);}
+       tvGia.setText(price);
+       tvSoluong.setText(number);
 
+       int intGia=Integer.parseInt(price);
+       int intSoluong=Integer.parseInt(number);
+
+       int Total=intGia*intSoluong;
+
+       tvTotalPrice.setText(String.valueOf(Total));
     }
 
     public void AccountMenu(View view) {

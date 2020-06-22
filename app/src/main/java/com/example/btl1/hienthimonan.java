@@ -17,8 +17,8 @@ public class hienthimonan extends AppCompatActivity {
     private EditText number;
     private Button datHang;
     int pos=0;
-    String num;
-
+    String num,price;
+    final FoodAdapter adapter=new FoodAdapter(this);
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class hienthimonan extends AppCompatActivity {
         Intent intent=getIntent();
         pos=intent.getExtras().getInt("POSITION");
 
-        final FoodAdapter adapter=new FoodAdapter(this);
+
         final ImageView img=(ImageView) findViewById(R.id.imgid);
         final TextView price=(TextView) findViewById(R.id.price);
 
@@ -36,7 +36,8 @@ public class hienthimonan extends AppCompatActivity {
         price.setText(String.valueOf(adapter.Price[pos]));
         number=(EditText) findViewById(R.id.txt_soluong);
         //truyen du lieu sang payment
-       num=number.getText().toString();
+
+
     }
 
     public void Announcement(View view) {
@@ -52,8 +53,8 @@ public class hienthimonan extends AppCompatActivity {
 
     public void payment(View view){
         Intent intent=new Intent(hienthimonan.this,Payment.class);
-        intent.putExtra("POSITION",pos);
-        intent.putExtra("NUMBER",num);
+        intent.putExtra("PRICE",String.valueOf(adapter.Price[pos]));
+        intent.putExtra("NUMBER",number.getText().toString());
         startActivity(intent);
     }
     public void thanhtoan(View view) {
