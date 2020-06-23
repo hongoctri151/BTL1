@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/password"
         android:layout_width="260dp"
         android:layout_height="41dp"
         android:autofillHints=""
@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/password" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/username"
         android:layout_width="260dp"
         android:layout_height="41dp"
         android:autofillHints=""
@@ -87,11 +87,11 @@
         app:layout_constraintVertical_bias="0.007" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="124dp"
         android:layout_height="41dp"
         android:background="@drawable/btn"
-        android:onClick="Login"
+
         android:text="@string/ng_nh_p"
 
         app:layout_constraintBottom_toBottomOf="parent"
