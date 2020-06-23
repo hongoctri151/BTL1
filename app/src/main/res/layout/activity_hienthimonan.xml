@@ -37,27 +37,28 @@
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="76dp"
-        android:layout_height="53dp"
+        android:layout_height="55dp"
         android:onClick="MainMenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/homeicon"
         tools:ignore="OnClick" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="96dp"
-        android:layout_height="52dp"
+        android:layout_height="55dp"
         android:onClick="thongtindonhang"
         android:tint="#11DCFA"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.973"
@@ -67,12 +68,12 @@
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="82dp"
-        android:layout_height="53dp"
+        android:layout_height="55dp"
         android:onClick="Announcement"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
         app:layout_constraintVertical_bias="0.304"
@@ -80,16 +81,16 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="81dp"
-        android:layout_height="53dp"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
         android:onClick="AccountMenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/usericon" />
 
     <ImageView

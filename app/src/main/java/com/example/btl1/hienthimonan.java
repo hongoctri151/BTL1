@@ -44,7 +44,11 @@ public class hienthimonan extends AppCompatActivity {
 
     public void Announcement(View view) {
         Intent intent=new Intent(this,AnnouncementMenu.class);
-
+        startActivity(intent);
+    }
+    public void thongtindonhang(View view)
+    {
+        Intent intent=new Intent(this,OrderMenu.class);
         startActivity(intent);
     }
 
