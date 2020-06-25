@@ -21,6 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -43,6 +44,7 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     // button số lượng
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+
 
     implementation 'com.firebaseui:firebase-ui-database:1.2.0'
     //noinspection GradleCompatible
