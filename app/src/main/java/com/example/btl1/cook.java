@@ -30,5 +30,21 @@ public class cook extends AppCompatActivity {
                 Intent intent=new Intent(this,UpdateMenu.class);// trang dang ky
                 startActivity(intent);
         }
+        public void OrderMenu(View view) {
+                Intent intent=new Intent(this,MainActivity.class);// trang dang ky
+                startActivity(intent);
+        }
+
+
+
+        public void AccountMenu(View view) {
+                Intent intent=new Intent(this,accountInfo.class);// trang dang ky
+                startActivity(intent);
+        }
+
+        public void order(View view) {
+                Intent intent=new Intent(this,Order.class);// trang dang ky
+                startActivity(intent);
+        }
 
 }

@@ -7,10 +7,10 @@
     tools:context=".UpdateMenu">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView9"
         android:layout_width="0dp"
         android:layout_height="59dp"
-        android:background="#EC1B1B"
+        android:background="@drawable/btn"
         android:gravity="center"
         android:text="UPDATEMENU"
         android:textSize="24sp"
@@ -18,16 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="backto"
-        android:text="BACK TO MAIN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <EditText
         android:id="@+id/ed_search"
@@ -38,7 +28,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <ListView
         android:id="@+id/listviewMonAn"
@@ -53,8 +43,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar7"
-        android:layout_width="512dp"
-        android:layout_height="85dp"
+        android:layout_width="412dp"
+        android:layout_height="98dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -67,10 +57,11 @@
         android:id="@+id/btn_del"
         android:layout_width="203dp"
         android:layout_height="0dp"
+        android:background="@drawable/btn"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listviewMonAn"
         app:layout_constraintVertical_bias="0.0" />
@@ -79,6 +70,7 @@
         android:id="@+id/btn_add"
         android:layout_width="206dp"
         android:layout_height="0dp"
+        android:background="@drawable/btn"
         android:text="ADD"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,6 +83,7 @@
         android:id="@+id/btn_up"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/btn"
         android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
