@@ -13,22 +13,14 @@ import java.util.List;
 public class FoodAdapter extends BaseAdapter {
     private Context context;
     private int layout;
-    //private List<MonAn> monAnList;
-    String FoodName[]={"Bánh cuốn","Bánh bao","Cơm sườn","Xôi","Bún"};
-    int Price[]={15000,15000,25000,10000,25000};
-    int Image[]={R.drawable.banhcuon,R.drawable.banhbao,R.drawable.comsuon,R.drawable.xoi,R.drawable.bun};
-    String detail[]={"Bánh cuốn được làm từ bột gạo hấp tráng mỏng, cuộn tròn, bên trong độn nhân rau hoặc thịt",
-            "Bánh bao trứng muối, có vỏ bánh thơm mùi sữa, nhân trứng muối chảy bùi bùi. Xứng đáng là món ngon cho khách hàng lựa chọn!",
-            "Đĩa cơm sườn với sườn nướng, bì, chả, trứng, giúp bạn no bụng với đầy đủ chất dinh dưỡng!",
-            "Xôi được làm từ gạo nếp dẻo, là món ăn không thể thiếu để giúp bạn nạp đầy dinh dưỡng",
-            "Bún với sợi trắng mềm, ăn kèm rau thơm và thịt bò"
-    };
+    private List<MonAn> monAnList;
 
-    /*public FoodAdapter(Context context, int layout, List<MonAn> monAnList) {
+
+    public FoodAdapter(Context context, int layout, List<MonAn> monAnList) {
         this.context = context;
         this.layout = layout;
         this.monAnList = monAnList;
-    }*/
+    }
     public FoodAdapter (Context context)
     {
         this.context=context;
@@ -36,13 +28,14 @@ public class FoodAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return FoodName.length;
+        return monAnList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return FoodName[i];
+        return monAnList.get(i);
     }
+
 
     @Override
     public long getItemId(int i) {
@@ -61,14 +54,10 @@ public class FoodAdapter extends BaseAdapter {
             ImageView imgHinh = (ImageView) view.findViewById(R.id.imageviewHinh);
             //gán giá trị
 
-        /*MonAn monAn=monAnList.get(i);
+        MonAn monAn=monAnList.get(i);
         txtTen.setText(monAn.getTen()) ;
         txtMota.setText(monAn.getMota());
-        imgHinh.setImageResource(monAn.getHinh());*/
-
-            txtTen.setText(FoodName[i]);
-            txtMota.setText(String.valueOf(Price[i]));
-            imgHinh.setImageResource(Image[i]);
+        imgHinh.setImageResource(monAn.getHinh());
 
         return view;
     }

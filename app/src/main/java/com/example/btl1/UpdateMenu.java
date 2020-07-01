@@ -31,7 +31,6 @@ public class UpdateMenu extends AppCompatActivity {
 
         lvMonAn.setAdapter(adapter);
 
-
         btnDel=(Button)findViewById(R.id.btn_del);
         btnAdd=(Button)findViewById(R.id.btn_add);
         btnChange=(Button)findViewById(R.id.btn_up);
