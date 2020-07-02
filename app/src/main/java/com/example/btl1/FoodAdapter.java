@@ -45,7 +45,7 @@ public class FoodAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if (view==null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);// lay du lieu tu layout dong_mon_an truyen vao view
             view = inflater.inflate(R.layout.dong_mon_an, null);}
             // Ánh xạ view
 
