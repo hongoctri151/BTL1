@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Setting extends AppCompatActivity {
+public class ChangeAnouncement extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_change_anouncement);
     }
 
     public void MainMenu(View view) {
@@ -22,10 +22,5 @@ public class Setting extends AppCompatActivity {
     public void Announcement(View view) {
         Intent Anouncemnet=new Intent(this,AnnouncementMenu.class);// trang dang ky
         startActivity(Anouncemnet);
-    }
-
-    public void AnouncementSetting(View view) {
-        Intent ChangeAnouncemnet=new Intent(this,ChangeAnouncement.class);// trang dang ky
-        startActivity(ChangeAnouncemnet);
     }
 }
