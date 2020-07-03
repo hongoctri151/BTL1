@@ -298,8 +298,8 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/help"
-
-                />
+                android:onClick="Help"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/help"
@@ -308,8 +308,10 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="Hướng Dẫn"
+
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
+
         </LinearLayout>
 
         <LinearLayout
