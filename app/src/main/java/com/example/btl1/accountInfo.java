@@ -38,4 +38,9 @@ public class accountInfo extends AppCompatActivity {
         Intent intent=new Intent(this,accountInfo.class);// trang chu
         startActivity(intent);
     }
+
+    public void Setting(View view) {
+        Intent Setting=new Intent(this,Setting.class);// trang chu
+        startActivity(Setting);
+    }
 }

@@ -91,7 +91,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ordericon" />
+        app:srcCompat="@drawable/ordericon"
+        tools:ignore="OnClick" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
