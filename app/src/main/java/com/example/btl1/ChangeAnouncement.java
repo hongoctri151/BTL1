@@ -14,10 +14,7 @@ public class ChangeAnouncement extends AppCompatActivity {
         setContentView(R.layout.activity_change_anouncement);
     }
 
-    public void MainMenu(View view) {
-        Intent home=new Intent(this,MainMenu.class);// trang dang ky
-        startActivity(home);
-    }
+
 
     public void Announcement(View view) {
         Intent Anouncemnet=new Intent(this,AnnouncementMenu.class);// trang dang ky

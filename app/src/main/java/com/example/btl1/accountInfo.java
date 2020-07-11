@@ -14,10 +14,7 @@ public class accountInfo extends AppCompatActivity {
         setContentView(R.layout.activity_account_info);
     }
 
-    public void MainMenu(View view) {
-        Intent intent=new Intent(this,MainMenu.class);// trang chu
-        startActivity(intent);
-    }
+
 
     public void OrderMenu(View view) {
         Intent intent=new Intent(this,OrderMenu.class);// trang chu

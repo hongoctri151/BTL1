@@ -1,14 +1,14 @@
 package com.example.btl1;
 
-public class food {
+public class Food {
     private String description;
     private String image;
     private String menuID;
     private String name;
     private String price;
-    public food(){}
+    public Food(){}
 
-    public food(String description, String image, String menuID, String name, String price) {
+    public Food(String description, String image, String menuID, String name, String price) {
         this.description = description;
         this.image = image;
         this.menuID = menuID;

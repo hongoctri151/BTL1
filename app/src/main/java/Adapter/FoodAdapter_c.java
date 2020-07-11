@@ -1,4 +1,4 @@
-package com.example.btl1;
+package Adapter;
 
 import android.content.Context;
 import android.view.ContextMenu;
@@ -12,32 +12,29 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.btl1.MonAn;
 import com.example.btl1.R;
+import com.example.btl1.Food;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 public class FoodAdapter_c extends RecyclerView.Adapter<FoodAdapter_c.ViewHolder> {
-    ArrayList<food> arrMonAn;
+    ArrayList<Food> arrMonAn;
     Context context;
     FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
     Query mDatabase;
 
-    public FoodAdapter_c(ArrayList<food> arrMonAn, Context context){
+    public FoodAdapter_c(ArrayList<Food> arrMonAn, Context context){
         this.arrMonAn=arrMonAn;
         this.context=context;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final food Food=arrMonAn.get(position);
+        final Food Food=arrMonAn.get(position);
         holder.name.setText(Food.getName());
         holder.price.setText(Food.getPrice()+"Đ");
         Picasso.with(context).load(Food.getImage()).into(holder.image);

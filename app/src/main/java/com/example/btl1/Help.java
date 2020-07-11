@@ -14,10 +14,7 @@ public class Help extends AppCompatActivity {
         setContentView(R.layout.activity_help);
     }
 
-    public void MainMenu(View view) {
-        Intent home=new Intent(this,MainMenu.class);// trang chu
-        startActivity(home);
-    }
+
 
     public void Announcement(View view) {
         Intent Anouncement=new Intent(this,AnnouncementMenu.class);// trang chu

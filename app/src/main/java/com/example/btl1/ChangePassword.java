@@ -14,10 +14,7 @@ public class ChangePassword extends AppCompatActivity {
         setContentView(R.layout.activity_change_password);
     }
 
-    public void MainMenu(View view) {
-        Intent home=new Intent(this,MainMenu.class);
-        startActivity(home);
-    }
+
 
     public void Announcement(View view) {
         Intent Anouncement=new Intent(this,AnnouncementMenu.class);

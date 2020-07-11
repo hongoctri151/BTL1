@@ -22,7 +22,6 @@
         <activity android:name=".rate" />
         <activity android:name=".OrderMenu" />
         <activity android:name=".AnnouncementMenu" />
-        <activity android:name=".MainMenu" />
         <activity android:name=".accountInfo" />
         <activity android:name=".signUp" />
         <activity

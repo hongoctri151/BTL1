@@ -15,7 +15,7 @@ public class Setting extends AppCompatActivity {
     }
 
     public void MainMenu(View view) {
-        Intent home=new Intent(this,MainMenu.class);
+        Intent home=new Intent(this,Home.class);
         startActivity(home);
     }
 

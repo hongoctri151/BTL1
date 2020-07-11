@@ -18,10 +18,7 @@ public class OrderMenu extends AppCompatActivity {
         Intent intent=new Intent(this,AnnouncementMenu.class);// trang dang ky
         startActivity(intent);
     }
-    public void MainMenu(View view) {
-        Intent intent=new Intent(this,MainMenu.class);// trang dang ky
-        startActivity(intent);
-    }
+
 
 
     public void AccountMenu(View view) {
