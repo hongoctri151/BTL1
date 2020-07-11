@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (edUsername.getText().toString().equals(checkUserName)) {
                     if (edPassword.getText().toString().equals(checkPassword)) {
-                        Intent intent=new Intent(MainActivity.this,MainMenu.class);
+                        Intent intent=new Intent(MainActivity.this,Home.class);
                         startActivity(intent);
 
                     }
