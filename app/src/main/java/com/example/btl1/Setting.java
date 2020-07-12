@@ -33,4 +33,9 @@ public class Setting extends AppCompatActivity {
         Intent ChangePassword=new Intent(this,ChangePassword.class);
         startActivity(ChangePassword);
     }
+
+    public void ChangeAccountInfo(View view) {
+        Intent ChangeAccountInfo=new Intent(this,ChangeAccountInfo.class);
+        startActivity(ChangeAccountInfo);
+    }
 }
