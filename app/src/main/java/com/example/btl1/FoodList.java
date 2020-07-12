@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -59,14 +60,19 @@ public class FoodList extends AppCompatActivity {
             @Override
             protected void populateViewHolder(FoodViewHolder foodViewHolder, Food model, int i) {
                 foodViewHolder.foodName.setText(model.getName());
-                foodViewHolder.foodPrice.setText(model.getPrice());
+
                 Picasso.with(getBaseContext()).load(model.getImage()).into(foodViewHolder.foodImage);
                 final Food local=model;
+
+
 
                 foodViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+
+                        Intent foodDetail=new Intent(FoodList.this,FoodDetail.class);
+                        foodDetail.putExtra("FoodId",adapter.getRef(position).getKey());
+                        startActivity(foodDetail);
                     }
                 });
 

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDetail">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/food_image">
+
+    </ImageView>
+
+    <com.rey.material.widget.FloatingActionButton
+        android:id="@+id/btn_cart"
+        android:layout_width="8dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/btn_cart">
+
+    </com.rey.material.widget.FloatingActionButton>
+
+
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/food_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:text="foodname">
+
+
+    </TextView>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/food_price"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="400dp"
+        android:text="foodprice">
+
+
+    </TextView>
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/food_number"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="400dp"
+        android:text="1">
+
+
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/food_description"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="500dp"
+        android:text="foodprice">
+
+
+    </TextView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
