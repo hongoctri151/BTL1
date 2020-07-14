@@ -1,6 +1,10 @@
 package com.example.btl1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,82 +17,103 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.Button;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+import Adapter.FoodAdapter_c;
 import Model.cook;
 
 public class UpdateMenu extends AppCompatActivity {
     Button btnDel,btnAdd,btnChange;
-    ListView lvMonAn;
-    // ArrayList<MonAn> arrayMonAn;
-    FoodAdapter adapter;
-    EditText editText;
-    int vitri=-1;
-    @Override
+    RecyclerView recyclerView;
+    ArrayList<com.example.btl1.Food> arrFood= new ArrayList<>();
+    FoodAdapter_c viewFoodAdapter;
+    com.example.btl1.Food Food;
+    Query mDatabase;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_menu);
-        lvMonAn=(ListView)findViewById(R.id.listviewMonAn);
-        final FoodAdapter adapter=new FoodAdapter(this);
-        //adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
+        khoitaoMenu();
 
-        lvMonAn.setAdapter(adapter);
+
+
 
         btnDel=(Button)findViewById(R.id.btn_del);
         btnAdd=(Button)findViewById(R.id.btn_add);
         btnChange=(Button)findViewById(R.id.btn_up);
-        editText=(EditText)findViewById(R.id.ed_search);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
 
-                searchItem(charSequence.toString());
-
-            }
 
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-
-        lvMonAn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(UpdateMenu.this,adapter.getItem(i).toString(),Toast.LENGTH_SHORT).show();
-                vitri=i;
-            }
-        });
-        btnDel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                adapter.notifyDataSetChanged();
-            }
-        });
 
     }
-    private void searchItem(String toString) {
 
-        for(int i=0;i<adapter.getCount(); i=i+1) {
-            if (!(adapter.getItem(i).toString().contains(toString.toLowerCase()))) {
-                Toast.makeText(UpdateMenu.this,adapter.getItem(i).toString(),Toast.LENGTH_SHORT).show();
-            }
-
-        }
-        adapter.notifyDataSetChanged();
+    public void addFood(View view) {
+        Intent intent=new Intent(this, AddFood.class);// trang dang ky
+        startActivity(intent);
+    }
+    public void updatemenu(View view) {
+        Intent intent=new Intent(this, cook.class);// trang dang ky
+        startActivity(intent);
+    }
+    public void OrderMenu(View view) {
+        Intent intent=new Intent(this, MainActivity.class);// trang dang ky
+        startActivity(intent);
     }
 
 
+
+    public void AccountMenu(View view) {
+        Intent intent=new Intent(this, menu_list.class);// trang dang ky
+        startActivity(intent);
+    }
+    public void update(View view) {
+        Intent intent=new Intent(this, update_food.class);// trang dang ky
+        startActivity(intent);
+    }
+
+    public void order(View view) {
+        Intent intent=new Intent(this, Order.class);// trang dang ky
+        startActivity(intent);
+    }
     public void backto(View view) {
         Intent intent=new Intent(this, cook.class);// trang dang ky
         startActivity(intent);
+    }
+    private void khoitaoMenu() {
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_food);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Food");
+
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    if (dataSnapshot.getValue() != null) {
+                        Food = ds.getValue(com.example.btl1.Food.class);
+                        arrFood.add(Food);
+                    }
+                }
+                final FoodAdapter_c viewFoodAdapter = new FoodAdapter_c(arrFood, getApplicationContext());
+                recyclerView.setAdapter(viewFoodAdapter);
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
 }

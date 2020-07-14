@@ -14,6 +14,7 @@ import Adapter.FoodAdapter_c;
 
 import com.example.btl1.MainActivity;
 import com.example.btl1.Order;
+import com.example.btl1.OrderList;
 import com.example.btl1.R;
 import com.example.btl1.UpdateMenu;
 import com.example.btl1.menu_list;
@@ -57,7 +58,7 @@ public class cook extends AppCompatActivity {
         }
 
         public void order(View view) {
-                Intent intent=new Intent(this, Order.class);// trang dang ky
+                Intent intent=new Intent(this, OrderList.class);// trang dang ky
                 startActivity(intent);
         }
         private void khoitaoMenu() {

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".update_food">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Cập nhật món ăn"
+        android:textColor="#0C6A95"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/updateFood"
+        android:layout_width="416dp"
+        android:layout_height="95dp"
+        android:hint="Tên món"
+        android:textColorHint="#A50C23"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_bias="0.088"
+        app:met_textColorHint="#4A0202"></com.rengwuxian.materialedittext.MaterialEditText>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/updatePrice"
+        android:layout_width="416dp"
+        android:layout_height="95dp"
+        android:hint="Giá Món"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_bias="0.343"
+        app:met_textColorHint="#7C0D0D"></com.rengwuxian.materialedittext.MaterialEditText>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatePrice"
+        app:layout_constraintVertical_bias="0.156"
+        tools:ignore="MissingConstraints">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatePrice"
+            app:layout_constraintVertical_bias="0.154"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/conhang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Còn hàng"
+                android:textColor="#03343A"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/hethang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Hết hàng"
+                android:textColor="#03343A"
+                android:textSize="22sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <Button
+            android:id="@+id/btnUpdateFood"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="#43A047"
+            android:text="Cập nhật"
+            android:textAllCaps="false"
+            android:textColor="#C11717"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnCancelFood"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#FF9100"
+            android:onClick="backtomain"
+            android:text="Đóng"
+            android:textAllCaps="false"
+            android:textColor="#EF2121"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
