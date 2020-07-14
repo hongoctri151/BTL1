@@ -10,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+        <activity android:name=".AddFood"></activity>
+=======
         <activity android:name=".FoodDetail"></activity>
         <activity android:name=".Home" />
         <activity android:name=".FoodList" />
@@ -17,6 +20,7 @@
         <activity android:name=".Help" />
         <activity android:name=".ChangeAnouncement" />
         <activity android:name=".Setting" />
+>>>>>>> f75c1550bdb85402fa78954e594714467ff8ce18
         <activity android:name=".menu_list" />
         <activity android:name=".Order" />
         <activity android:name=".UpdateMenu" />
