@@ -1,4 +1,4 @@
-package com.example.btl1;
+package Model;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import Adapter.FoodAdapter_c;
+
+import com.example.btl1.MainActivity;
+import com.example.btl1.Order;
+import com.example.btl1.R;
+import com.example.btl1.UpdateMenu;
+import com.example.btl1.menu_list;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -35,23 +41,23 @@ public class cook extends AppCompatActivity {
         }
 
         public void updatemenu(View view) {
-                Intent intent=new Intent(this,UpdateMenu.class);// trang dang ky
+                Intent intent=new Intent(this, UpdateMenu.class);// trang dang ky
                 startActivity(intent);
         }
         public void OrderMenu(View view) {
-                Intent intent=new Intent(this,MainActivity.class);// trang dang ky
+                Intent intent=new Intent(this, MainActivity.class);// trang dang ky
                 startActivity(intent);
         }
 
 
 
         public void AccountMenu(View view) {
-                Intent intent=new Intent(this,menu_list.class);// trang dang ky
+                Intent intent=new Intent(this, menu_list.class);// trang dang ky
                 startActivity(intent);
         }
 
         public void order(View view) {
-                Intent intent=new Intent(this,Order.class);// trang dang ky
+                Intent intent=new Intent(this, Order.class);// trang dang ky
                 startActivity(intent);
         }
         private void khoitaoMenu() {
