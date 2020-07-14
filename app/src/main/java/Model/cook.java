@@ -1,4 +1,4 @@
-package com.example.btl1;
+package Model;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
+import Adapter.FoodAdapter_c;
+
+import com.example.btl1.MainActivity;
+import com.example.btl1.Order;
+import com.example.btl1.R;
+import com.example.btl1.UpdateMenu;
+import com.example.btl1.menu_list;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,9 +27,9 @@ import java.util.ArrayList;
 
 public class cook extends AppCompatActivity {
         RecyclerView recyclerView;
-        ArrayList<food> arrFood= new ArrayList<>();
+        ArrayList<com.example.btl1.Food> arrFood= new ArrayList<>();
         FoodAdapter_c viewFoodAdapter;
-        food Food;
+        com.example.btl1.Food Food;
         Query mDatabase;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +41,23 @@ public class cook extends AppCompatActivity {
         }
 
         public void updatemenu(View view) {
-                Intent intent=new Intent(this,UpdateMenu.class);// trang dang ky
+                Intent intent=new Intent(this, UpdateMenu.class);// trang dang ky
                 startActivity(intent);
         }
         public void OrderMenu(View view) {
-                Intent intent=new Intent(this,MainActivity.class);// trang dang ky
+                Intent intent=new Intent(this, MainActivity.class);// trang dang ky
                 startActivity(intent);
         }
 
 
 
         public void AccountMenu(View view) {
-                Intent intent=new Intent(this,menu_list.class);// trang dang ky
+                Intent intent=new Intent(this, menu_list.class);// trang dang ky
                 startActivity(intent);
         }
 
         public void order(View view) {
-                Intent intent=new Intent(this,Order.class);// trang dang ky
+                Intent intent=new Intent(this, Order.class);// trang dang ky
                 startActivity(intent);
         }
         private void khoitaoMenu() {
@@ -68,7 +73,7 @@ public class cook extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                                         if (dataSnapshot.getValue() != null) {
-                                                Food = ds.getValue(food.class);
+                                                Food = ds.getValue(com.example.btl1.Food.class);
                                                 arrFood.add(Food);
                                         }
                                 }

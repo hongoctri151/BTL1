@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/password" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/phone"
         android:layout_width="260dp"
         android:layout_height="41dp"
         android:autofillHints=""
@@ -102,11 +102,11 @@
         app:layout_constraintVertical_bias="0.41" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSignUp"
         android:layout_width="124dp"
         android:layout_height="41dp"
         android:background="@drawable/btn"
-        android:onClick="SignUp"
+
 
         android:text="@string/ng_k"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cook">
+    tools:context="Model.cook">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar5"
@@ -71,38 +71,38 @@
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="96dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
         android:onClick="updatemenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/note" />
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="77dp"
-        android:layout_height="71dp"
+        android:layout_width="56dp"
+        android:layout_height="47dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="AccountMenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintEnd_toEndOf="@+id/toolbar4"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.571"
         app:srcCompat="@drawable/usericon" />
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="76dp"
-        android:layout_height="0dp"
+        android:layout_width="61dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:onClick="OrderMenu"
@@ -110,24 +110,23 @@
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintStart_toStartOf="@id/toolbar4"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/homeicon"
         tools:ignore="OnClick" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="92dp"
-        android:layout_height="0dp"
+        android:layout_width="76dp"
+        android:layout_height="51dp"
         android:layout_marginEnd="116dp"
         android:layout_marginRight="116dp"
         android:onClick="order"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintEnd_toEndOf="@id/toolbar4"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.878"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ordericon" />
 
     <androidx.constraintlayout.widget.Guideline

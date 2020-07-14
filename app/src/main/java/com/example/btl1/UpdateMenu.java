@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.Button;
-import java.util.ArrayList;
+
+import Model.cook;
 
 public class UpdateMenu extends AppCompatActivity {
     Button btnDel,btnAdd,btnChange;
@@ -30,7 +31,6 @@ public class UpdateMenu extends AppCompatActivity {
         //adapter=new FoodAdapter(this,R.layout.dong_mon_an,arrayMonAn);
 
         lvMonAn.setAdapter(adapter);
-
 
         btnDel=(Button)findViewById(R.id.btn_del);
         btnAdd=(Button)findViewById(R.id.btn_add);
@@ -87,7 +87,7 @@ public class UpdateMenu extends AppCompatActivity {
 
 
     public void backto(View view) {
-        Intent intent=new Intent(this,cook.class);// trang dang ky
+        Intent intent=new Intent(this, cook.class);// trang dang ky
         startActivity(intent);
     }
 

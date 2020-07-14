@@ -1,4 +1,4 @@
-package com.example.btl1.adapter;
+package Adapter;
 
 import android.content.Context;
 import android.view.ContextMenu;
@@ -17,9 +17,6 @@ import com.example.btl1.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

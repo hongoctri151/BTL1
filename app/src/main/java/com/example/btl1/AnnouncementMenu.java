@@ -24,10 +24,6 @@ public class AnnouncementMenu extends AppCompatActivity {
 
 
 
-    public void MainMenu(View view) {
-        Intent intent=new Intent(this,MainMenu.class);// trang dang ky
-        startActivity(intent);
-    }
 
     public void Announcement(View view) {
         Intent intent=new Intent(this,AnnouncementMenu.class);// trang dang ky

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.btl1">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,17 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".AddFood"></activity>
+=======
+        <activity android:name=".FoodDetail"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".FoodList" />
+        <activity android:name=".ChangePassword" />
+        <activity android:name=".Help" />
+        <activity android:name=".ChangeAnouncement" />
+        <activity android:name=".Setting" />
+>>>>>>> f75c1550bdb85402fa78954e594714467ff8ce18
         <activity android:name=".menu_list" />
         <activity android:name=".Order" />
         <activity android:name=".UpdateMenu" />
-        <activity android:name=".cook" />
+        <activity android:name="Model.cook" />
         <activity android:name=".rate" />
-        <activity android:name=".Payment" />
-        <activity android:name=".hienthimonan" />
         <activity android:name=".OrderMenu" />
         <activity android:name=".AnnouncementMenu" />
-        <activity android:name=".MainMenu" />
         <activity android:name=".accountInfo" />
         <activity android:name=".signUp" />
         <activity

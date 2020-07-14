@@ -33,12 +33,12 @@
         app:srcCompat="@drawable/back" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnSignUp"
         android:layout_width="131dp"
         android:layout_height="42dp"
         android:background="@drawable/btn"
         android:text="Đăng ký"
-        android:onClick="dangky"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,14 +47,14 @@
         tools:ignore="OnClick" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edtName"
         android:layout_width="300dp"
         android:layout_height="41dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:background="@drawable/textedit"
         android:ems="10"
-        android:hint="Tên đăng nhập"
+        android:hint="Họ và tên"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.317" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/edtMail"
         android:layout_width="300dp"
         android:layout_height="41dp"
         android:background="@drawable/textedit"
@@ -95,7 +95,7 @@
         app:srcCompat="@drawable/phone" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/edtPassword"
         android:layout_width="300dp"
         android:layout_height="41dp"
         android:background="@drawable/textedit"
@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/password" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/edtPhone"
         android:layout_width="300dp"
         android:layout_height="41dp"
         android:background="@drawable/textedit"
