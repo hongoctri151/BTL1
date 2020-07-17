@@ -113,38 +113,38 @@
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="96dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_width="71dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
         android:onClick="updatemenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.384"
         app:srcCompat="@drawable/note" />
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="77dp"
-        android:layout_height="71dp"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="AccountMenu"
         android:tint="#11DCFA"
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintEnd_toEndOf="@+id/toolbar4"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/usericon" />
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="76dp"
-        android:layout_height="0dp"
+        android:layout_width="67dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:onClick="OrderMenu"
@@ -152,7 +152,7 @@
         app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintStart_toStartOf="@id/toolbar4"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/homeicon"
         tools:ignore="OnClick" />
 
@@ -168,10 +168,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="92dp"
-        android:layout_height="0dp"
+        android:layout_width="79dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="116dp"
         android:layout_marginRight="116dp"
         android:onClick="order"
@@ -181,6 +182,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/ordericon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
