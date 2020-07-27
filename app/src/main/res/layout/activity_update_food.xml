@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="Cập nhật món ăn"
-        android:textColor="#0C6A95"
-        android:textSize="18sp"
+        android:background="#E3DADA"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23"
         app:layout_constraintVertical_bias="0.088"
+
         app:met_textColorHint="#4A0202"></com.rengwuxian.materialedittext.MaterialEditText>
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -114,10 +115,10 @@
             android:id="@+id/btnUpdateFood"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:background="#43A047"
+            android:background="@drawable/btn"
             android:text="Cập nhật"
             android:textAllCaps="false"
-            android:textColor="#C11717"
+
             android:textSize="15sp" />
 
         <Button
@@ -125,11 +126,11 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginLeft="30dp"
-            android:background="#FF9100"
+            android:background="@drawable/btn"
             android:onClick="backtomain"
             android:text="Đóng"
             android:textAllCaps="false"
-            android:textColor="#EF2121"
+
             android:textSize="15sp" />
 
 
