@@ -53,7 +53,7 @@ public class AddFood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_food);
         final StorageReference storageRef = storage.getReference().child("Food");
-        //AnhXa();
+        AnhXa();
         waiting =  new SpotsDialog.Builder().setContext(this).setMessage("Vui lòng đợi").setCancelable(false).build();
 
         folder.setOnClickListener(new View.OnClickListener() {
