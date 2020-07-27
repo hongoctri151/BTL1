@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.286">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtTenMon"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/size10dp"
@@ -42,7 +42,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/edtGiaMon"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginTop="20dp"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.523" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/ivImage"
         android:layout_width="100dp"
         android:layout_height="98dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +77,7 @@
         app:srcCompat="@drawable/image" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnfolder"
         android:layout_width="106dp"
         android:layout_height="89dp"
         android:background="@drawable/folder"
@@ -93,6 +93,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn"
         android:text="Thêm"
+        android:id="@+id/btnThemMonLayoutThemMon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
