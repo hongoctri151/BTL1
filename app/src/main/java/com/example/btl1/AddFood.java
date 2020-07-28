@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.Continuation;
@@ -24,8 +25,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -35,6 +40,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Calendar;
 
+import Model.User;
 import Model.cook;
 import dmax.dialog.SpotsDialog;
 
@@ -47,12 +53,14 @@ public class AddFood extends AppCompatActivity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     private String link ;
     AlertDialog waiting;
+    final FirebaseDatabase database=FirebaseDatabase.getInstance();
+    final DatabaseReference storageRef = database.getReference("Foods");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_food);
-        final StorageReference storageRef = storage.getReference().child("Food");
+
         AnhXa();
         waiting =  new SpotsDialog.Builder().setContext(this).setMessage("Vui lòng đợi").setCancelable(false).build();
 
@@ -68,7 +76,10 @@ public class AddFood extends AppCompatActivity {
         themMon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                waiting.show();
+
+                tenMon=(EditText) findViewById(R.id.edtTenMon);
+                giaMon=(EditText) findViewById(R.id.edtGiaMon);
+                image=(ImageView)findViewById(R.id.ivImage);
                 final String ten  =   tenMon.getText().toString();
                 final String stringGia = giaMon.getText().toString();
 
@@ -77,60 +88,23 @@ public class AddFood extends AppCompatActivity {
                     Toast.makeText(AddFood.this, "Vui lòng nhập đầy đủ thông tin ", Toast.LENGTH_SHORT).show();
                 }
                 else{
-
-                    final String tenhinh="image";
-                    final StorageReference mountainsRef = storageRef.child(tenhinh+".png");
-                    image.setDrawingCacheEnabled(true);
-                    image.buildDrawingCache();
-
-                    Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
-                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-                    byte[] data = baos.toByteArray();
-
-                    final UploadTask uploadTask = mountainsRef.putBytes(data);
-                    uploadTask.addOnFailureListener(new OnFailureListener() {
+                    storageRef.addValueEventListener(new ValueEventListener() {
                         @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Handle unsuccessful uploads
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                waiting.dismiss();
+                                Food food=new Food("","","",ten,stringGia);
+                                storageRef.child(ten);
+                                Toast.makeText(AddFood.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                                finish();
+
                         }
-                    }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+
                         @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            // get downloadUrl
-                            Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                                @Override
-                                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                                    if (!task.isSuccessful()) {
-                                        throw task.getException();
-                                    }
-                                    link = mountainsRef.getDownloadUrl().toString();
-                                    // Continue with the task to get the download URL
-                                    return mountainsRef.getDownloadUrl();
-                                }
-                            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Uri> task) {
-                                    if (task.isSuccessful()) {
-                                        waiting.dismiss();
-                                        link = task.getResult().toString();
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-
-                                        Food Mon= new Food("",link,"",ten,stringGia);
-                                        DatabaseReference refData = FirebaseDatabase.getInstance().getReference();
-                                        refData.child("Foods").setValue(Mon);
-                                        Toast.makeText(AddFood.this, "Thêm món ăn thành công", Toast.LENGTH_SHORT).show();
-
-
-                                    } else {
-                                        Toast.makeText(AddFood.this, "Thêm không thành công", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
                         }
                     });
-
-
                 }
 
             }

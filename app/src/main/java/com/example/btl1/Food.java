@@ -1,5 +1,13 @@
 package com.example.btl1;
 
+import android.content.Context;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
 public class Food {
     private String description;
     private String image;
@@ -7,6 +15,7 @@ public class Food {
     private String name;
     private String price;
     public Food(){}
+
 
     public Food(String description, String image, String menuID, String name, String price) {
         this.description = description;
@@ -55,4 +64,6 @@ public class Food {
     public void setPrice(String price) {
         this.price = price;
     }
+
+
 }

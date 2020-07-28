@@ -12,6 +12,7 @@ import android.view.View;
 
 import Adapter.FoodAdapter_c;
 
+import com.example.btl1.Food;
 import com.example.btl1.MainActivity;
 import com.example.btl1.Order;
 import com.example.btl1.OrderList;
