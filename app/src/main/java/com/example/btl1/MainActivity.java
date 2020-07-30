@@ -53,13 +53,38 @@ public class MainActivity extends AppCompatActivity {
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
 
                             mDialog.dismiss();
-                            if (user.getPassword().equals(edtPassword.getText().toString())) {
-                                Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(MainActivity.this,Home.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(MainActivity.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
+                            if((user.getName().toString().equals("minh")) && (edtPassword.getText().toString().equals("123457"))){
+
+                                    Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(MainActivity.this,cook.class);
+                                    startActivity(intent)
+                                    ;
+                                    btnSignUp.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Intent intent=new Intent(MainActivity.this,cook.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+
                             }
+                            else {
+                                if (user.getPassword().equals(edtPassword.getText().toString())) {
+
+                                    Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(MainActivity.this, Home.class);
+                                    startActivity(intent);
+                                    btnSignUp.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Intent intent = new Intent(MainActivity.this, signUp.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }
+                            }
+                           /* */
+
                         }
                         else {
                             Toast.makeText(MainActivity.this,"Người dùng không tồn tại",Toast.LENGTH_SHORT).show();
@@ -72,13 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,signUp.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
@@ -87,8 +106,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void Cook(View view) {
-        Intent mainMenu=new Intent(this, cook.class);//trang account_menu
-        startActivity(mainMenu);
-    }
+
 }
