@@ -8,14 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Toast;
 import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
@@ -23,15 +17,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
 
 import Adapter.FoodAdapter_c;
 import Model.cook;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-
-import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
 
 public class UpdateMenu extends AppCompatActivity {
     Button btnDel,btnAdd,btnChange,search;
@@ -170,5 +160,9 @@ public class UpdateMenu extends AppCompatActivity {
             Intent intent=new Intent(this, cook.class);// trang dang ky
             startActivity(intent);
         }
+    public void search(View view) {
+        Intent intent=new Intent(this, SearchFood.class);// trang dang ky
+        startActivity(intent);
+    }
 
 }

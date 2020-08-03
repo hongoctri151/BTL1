@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="MissingPrefix">
+        <activity android:name=".SearchFood"></activity>
         <activity android:name=".OrderList" />
         <activity android:name=".viewOrder" />
         <activity android:name=".update_food" />
