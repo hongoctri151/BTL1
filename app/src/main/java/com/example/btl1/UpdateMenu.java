@@ -9,18 +9,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.rey.material.widget.TextView;
 
 import java.util.ArrayList;
 
 import Adapter.FoodAdapter_c;
+import Interface.ItemClickListener;
 import Model.cook;
 
 public class UpdateMenu extends AppCompatActivity {
@@ -30,8 +34,8 @@ public class UpdateMenu extends AppCompatActivity {
     com.example.btl1.Food Food;
     com.example.btl1.Food Food1;
     Query mDatabase;
+    TextView lview;
 
-    SearchView searchView;
     ArrayList<com.example.btl1.Food> arrFoodSearch=new ArrayList<>();;
 
     ArrayList<String> suggestList = new ArrayList<>();
@@ -44,20 +48,15 @@ public class UpdateMenu extends AppCompatActivity {
                 .build());*/
         setContentView(R.layout.activity_update_menu);
         khoitaoMenu();
-        searchView = (SearchView) findViewById(R.id.searchView);
+
+
         search=(Button)findViewById(R.id.search);
-        final String text=searchView.toString().toLowerCase();
 
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startSearch(text);
 
-            }
-        });
 
         // end tiem kiem
         btnDel = (Button) findViewById(R.id.btn_del);
+
         btnAdd = (Button) findViewById(R.id.btn_add);
         btnChange = (Button) findViewById(R.id.btn_up);
 
@@ -86,6 +85,7 @@ public class UpdateMenu extends AppCompatActivity {
                     }
                     final FoodAdapter_c viewFoodAdapter = new FoodAdapter_c(arrFoodSearch, getApplicationContext());
                     recyclerView.setAdapter(viewFoodAdapter);
+
                 }
 
             }
@@ -94,11 +94,10 @@ public class UpdateMenu extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
 
     }
-
-
 
 
 
@@ -122,14 +121,17 @@ public class UpdateMenu extends AppCompatActivity {
                 final FoodAdapter_c viewFoodAdapter = new FoodAdapter_c(arrFood, getApplicationContext());
                 recyclerView.setAdapter(viewFoodAdapter);
 
-
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
+
+
     }
         public void addFood(View view) {
             Intent intent=new Intent(this, AddFood.class);// trang dang ky
@@ -162,6 +164,10 @@ public class UpdateMenu extends AppCompatActivity {
         }
     public void search(View view) {
         Intent intent=new Intent(this, SearchFood.class);// trang dang ky
+        startActivity(intent);
+    }
+    public void dele(View view) {
+        Intent intent=new Intent(this, DeleteFood.class);// trang dang ky
         startActivity(intent);
     }
 
