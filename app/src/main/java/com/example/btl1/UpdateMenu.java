@@ -162,10 +162,7 @@ public class UpdateMenu extends AppCompatActivity {
             Intent intent=new Intent(this, update_food.class);// trang dang ky
             startActivity(intent);
         }
-        public void order(View view) {
-            Intent intent=new Intent(this, Order.class);// trang dang ky
-            startActivity(intent);
-        }
+
         public void backto(View view) {
             Intent intent=new Intent(this, cook.class);// trang dang ky
             startActivity(intent);

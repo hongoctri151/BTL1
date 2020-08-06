@@ -147,8 +147,5 @@ public class AddFood extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void order(View view) {
-        Intent intent=new Intent(this,Order.class);// trang dang ky
-        startActivity(intent);
-    }
+
 }

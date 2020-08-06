@@ -3,6 +3,7 @@ package Model;
 public class User {
     private String name;
     private String password;
+    private String phone;
 
     public User(String name, String password) {
         this.name = name;

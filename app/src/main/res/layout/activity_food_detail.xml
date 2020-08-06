@@ -46,17 +46,18 @@
 
 
     </TextView>
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/number_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="450dp"
+        >
 
-    <EditText
-        android:id="@+id/food_number"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="330dp"
-        android:layout_marginTop="400dp"
-        android:text="1">
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
 
-    </EditText>
+
 
     <TextView
         android:layout_width="match_parent"

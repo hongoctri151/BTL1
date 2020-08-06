@@ -40,6 +40,7 @@ public class Home extends AppCompatActivity {
         recycler_menu.setLayoutManager(layoutManager);
 
         loadMenu();
+
     }
 
     private void loadMenu() {
