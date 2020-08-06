@@ -8,14 +8,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_menu"
-        android:layout_width="376dp"
-        android:layout_height="555dp"
+        android:layout_width="367dp"
+        android:layout_height="509dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -61,6 +62,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.971"
         app:srcCompat="@drawable/ordericon" />
+
+    <ImageView
+        android:id="@+id/btn_cart"
+        android:layout_width="81dp"
+        android:layout_height="53dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971">
+
+    </ImageView>
 
     <ImageView
         android:id="@+id/imageView23"

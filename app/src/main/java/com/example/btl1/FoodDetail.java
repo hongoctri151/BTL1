@@ -3,6 +3,7 @@ package com.example.btl1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -68,12 +69,16 @@ public class FoodDetail extends AppCompatActivity {
                        numberButton.getNumber(),
                        currentFood.getPrice(),
                        currentFood.getDescription()));
-                Toast.makeText(FoodDetail.this,"Added to Cart",Toast.LENGTH_SHORT).show();
+                Toast.makeText(FoodDetail.this,"Đã thêm vào giỏ hàng",Toast.LENGTH_SHORT).show();
             }
 
         });
-    }
 
+    }
+    public void CartDetail(View view) {
+        Intent Anouncemnet=new Intent(this,Cart.class);
+        startActivity(Anouncemnet);
+    }
     private void getDetailFood(String foodID) {
         food.child(foodID).addValueEventListener(new ValueEventListener() {
             @Override

@@ -27,7 +27,7 @@
         <activity android:name=".ChangeAnouncement" />
         <activity android:name=".Setting" />
         <activity android:name=".menu_list" />
-        <activity android:name=".Order" />
+        <activity android:name=".Cart" />
         <activity android:name=".UpdateMenu" />
         <activity android:name="Model.cook" />
         <activity android:name=".rate" />

@@ -66,5 +66,9 @@ public class Home extends AppCompatActivity {
         recycler_menu.setAdapter(adapter);
 
     }
+    public void OrderDetail(View view) {
+        Intent Anouncemnet=new Intent(this,Cart.class);
+        startActivity(Anouncemnet);
+    }
 
 }
